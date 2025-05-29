@@ -1,0 +1,46 @@
+server:
+  port: 8090
+spring:
+  application:
+   name: ITEM-SERVICE
+
+  devtools:
+    livereload:
+      enabled: true
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/shop?useSSL=false&serverTimezone=UTC
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+# Hibernate Configuration (Optional, but recommended)
+  jpa:
+    show-sql: true
+
+    hibernate:
+     ddl-auto: update
+
+    properties:
+     hibernate.transaction.jta.platform: org.hibernate.engine.transaction.internal.jta.JtaPlatformHelper$None  # Explicitly disable JTA
+
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+     defaultZone: http://localhost:8761/eureka/
+
+
+okta:
+  oauth2:
+    issuer: https://dev-59956631.okta.com/oauth2/default
+    audience: api://default
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+    feign: DEBUG
