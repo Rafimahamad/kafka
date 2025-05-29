@@ -1,0 +1,74 @@
+.container {
+    display: flex;
+    place-content: center;
+    align-items: center;
+}
+
+.make-center {
+    display: flex;
+    place-content: center;
+}
+
+.tagName {
+    display: flex;
+    place-content: center;
+}
+
+.card-container {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    gap: 20px;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card {
+    width: 150px;
+    margin: 5px auto;
+    /* Center the card horizontally */
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f7f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: transform 0.2s ease-in-out;
+    font-weight: bold;
+}
+
+.content {
+    font-size: 1rem;
+    color: #555;
+}
+
+button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+
+button:hover {
+    border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+}
+
+.Navbar {
+    display: flex;
+}

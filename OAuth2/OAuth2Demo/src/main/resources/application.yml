@@ -1,0 +1,30 @@
+server:
+  port: 8990
+
+spring:
+  application:
+    name: OAuth2.0
+
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            clientId: Ov23liAJdBOWKpnEM5L5
+            clientSecret: 1e50089ded42d8400ebd5a56f878daaa4927f580
+            authorizationGrantType: authorization_code
+            redirectUri: "{baseUrl}/login/oauth2/code/{registrationId}"
+            scope: read:user
+            clientName: GitHub
+        provider:
+          github:
+            authorizationUri: https://github.com/login/oauth/authorize
+            tokenUri: https://github.com/login/oauth/access_token
+            userInfoUri: https://api.github.com/user
+
+
+
+
+
+
+
